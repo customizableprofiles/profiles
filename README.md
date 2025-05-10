@@ -14,3 +14,9 @@
 ## Profiles
 We currently have 1 profile and 2 others in development.
 We want our people who uses our profile feel supreme!
+
+## Discord
+Soon!
+
+# Credits
+Founder: mrdavidss-vgg
