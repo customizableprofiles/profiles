@@ -12,7 +12,7 @@
 <p align="center">What is <code>Customizable Profiles</code>? Well it's where you can Upload + Use these templates by people and html developers!</p>
 
 ## Profiles
-We currently have 1 profile and 2 others in development.
+We currently have 2 profile and 1 others in development.
 We want our people who uses our profile feel supreme!
 
 ## Discord
