@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- Change to whatever you want --->
+    <title>Letsfo profile</title> 
+  <!--- Same here Change whatever you want!!! --->
+    <meta property="og:title" content="Letsfo's Profile" />
+    <meta property="og:description" content="(David's Profile Template!)" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://letsfo.github.io/" />
+    <meta property="og:type" content="website" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       /*CSS*/
+      
+      /*colors!*/
+        :root {
+            --icon-color: #5db1f5;
+            --text-color: #FFFFFF;
+            --box-color: #2986cc;
+            --accent-color: #5db1f5;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://raw.githubusercontent.com/letsfo/assets/refs/heads/main/IMG_3153.jpeg') no-repeat center center; /*Background! Change if needed.*/
+            background-size: cover;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+
+
+      p.promo {
+            color: #5db1f5;  /*Our Promo!! Please don't delete this style.*/
+      }
+      
+        .profile-card {
+            background: linear-gradient(to right bottom, rgba(16, 53, 80, 0.6), rgba(36, 69, 96, 0.6));  /* Change this to whatever color you want!*/
+            border-radius: 20px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: var(--text-color);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--icon-color);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .profile-name {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .profile-description {
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .website-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .website-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(36, 69, 96, 0.8); /* Change to yout perfered color*/
+            color: var(--text-color);
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .website-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            background-color: rgba(36, 69, 104, 0.9);
+        }
+
+        .accent-decoration {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle at top left, rgba(35, 70, 104, 0.4), transparent 70%);
+            border-radius: 0 0 0 100%;
+        }
+        
+
+        .typing-text {
+            font-weight: bold;
+            min-height: 1.5em;
+        }
+        
+        .typing-text::after {
+            content: "|";
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+  <!--- This is the profile card you can edit this to whatever you want! --->
+    <div class="profile-card">
+        <div class="accent-decoration"></div>
+        <img src="https://raw.githubusercontent.com/letsfo/assets/refs/heads/main/IMG_3152.png" alt="Profile" class="profile-image"> <!--- PFP Image --->
+        <h1 class="profile-name">Letsfo (Example)</h1> <!--- Name --->
+        <h2 class="profile-name typing-text" id="typing-text"></h2> <!-- Typing Text (dont edit this!) --->
+        <p class="profile-description">Example</p>
+        <div class="website-links">
+            </a>
+            <a href="https://github.com/customizableprofiles/" class="website-link" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+  <p class="promo">Template by: CustomizableProfiles on github. (Made with ❤️)</p> <!--- Please leave this text! Thank you!--->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const texts = [
+                "Something here", // Change these for a text delete and a typing text and you can put whatever you want!
+                "Something else"
+            ];
+            const typingElement = document.getElementById('typing-text');
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 120; 
+            
+            function typeText() {
+                const currentText = texts[textIndex];
+                
+                if (isDeleting) {
+                    typingElement.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    typingElement.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 100;
+                }
+                if (!isDeleting && charIndex === currentText.length) {
+                    typingSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                    typingSpeed = 500;
+                }
+                
+                setTimeout(typeText, typingSpeed);
+            }
+            
+            setTimeout(typeText, 1000);
+        });
+    </script>
+</body>
+</html>
