@@ -1,0 +1,233 @@
+<!-- Customizable Profiles Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant-Red</title> <!-- Title. Set as your name or something else. -->
+    <style>
+        /*Main CSS*/
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        .profile-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .profile-header {
+            padding: 30px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-style: italic;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .profile-content {
+            background-color: white;
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            color: #ff1a1a;
+            border-bottom: 2px solid #ff1a1a;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill {
+            background-color: #ffe6e6;
+            color: #ff1a1a;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .project {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ffcccc;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .project h3 {
+            color: #ff3333;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff1a1a;
+        }
+        
+        .decoration {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .dec-1 {
+            top: -50px;
+            right: -50px;
+        }
+        
+        .dec-2 {
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+        }
+        
+        @media (max-width: 600px) {
+            .profile-container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .profile-header {
+                padding: 20px;
+            }
+            
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Profile Containter -->
+    <div class="profile-container">
+        <div class="decoration dec-1"></div>
+        <div class="decoration dec-2"></div>
+        
+        <div class="profile-header">
+            <img src="https://raw.githubusercontent.com/letsfo/assets/refs/heads/main/IMG_3152.png" alt="Profile Picture" class="profile-pic"> <!-- Replace Image with yours -->
+            <h1>Jorge (Example)</h1>
+            <p class="tagline">Web Developer & Digital Designer</p>
+            
+            <div class="social-links">
+                <a href="https://x.com/" title="X">🐦</a>
+                <a href="https://github.com" title="GitHub">💻</a>
+            </div>
+        </div>
+        
+        <div class="profile-content">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>about me section (replace with your about me)</p>
+            </div>
+            
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Vue.js</span>
+                    <span class="skill">Git</span>
+                </div>
+            </div>
+            
+            <!-- Project Section -->
+
+            <div class="section">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Some Project</h3>
+                    <p>Some Project Description</p>
+                </div>
+
+            <!-- Contact Info -->
+            
+            <div class="section">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>example@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>(123) 456-7890</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🏠</span>
+                        <span>San Francisco, CA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <h5>Template from <a href="https://github.com/customizableproflies/profiles/">Customizable Profiles</a> on github!</h5> <!-- Please do not delete this as this helps us! -->
+</body>
+</html>
