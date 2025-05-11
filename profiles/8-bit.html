@@ -1,0 +1,289 @@
+<!-- Customizable Profiles Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Bit</title> <!-- Replace with a different title -->
+    <style>
+        /*CSS*/
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /*Fonts*/
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            background-image: 
+                linear-gradient(#0f3460 2px, transparent 2px),
+                linear-gradient(90deg, #0f3460 2px, transparent 2px),
+                linear-gradient(#0f3460 1px, transparent 1px),
+                linear-gradient(90deg, #0f3460 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+            background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+            font-family: 'Press Start 2P', cursive;
+            color: #e94560;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .profile-container {
+            background-color: rgba(30, 30, 60, 0.85);
+            border: 4px solid #e94560;
+            box-shadow: 0 0 0 4px #0f3460, 
+                        0 0 0 8px #533483,
+                        0 0 20px 10px rgba(233, 69, 96, 0.3);
+            padding: 30px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            margin: 20px;
+        }
+        
+        .profile-container::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px dashed #e94560;
+            pointer-events: none;
+            animation: pulse 2s infinite;
+        }
+        
+        .profile-pic-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 3;
+            overflow: hidden;
+        }
+        
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        /* Retro frame elements */
+        .frame-piece {
+            position: absolute;
+            border-radius: 50%;
+            border-style: solid;
+            animation: pulse-frame 2s infinite ease-in-out;
+        }
+        
+        .frame-1 {
+            width: 160px;
+            height: 160px;
+            border-width: 4px;
+            border-color: #e94560;
+            z-index: 2;
+            animation-delay: 0s;
+        }
+        
+        .frame-2 {
+            width: 170px;
+            height: 170px;
+            border-width: 3px;
+            border-color: #533483;
+            z-index: 1;
+            animation-delay: 0.2s;
+        }
+        
+        .frame-3 {
+            width: 180px;
+            height: 180px;
+            border-width: 2px;
+            border-color: #0f3460;
+            z-index: 0;
+            animation-delay: 0.4s;
+        }
+        
+        .frame-4 {
+            width: 190px;
+            height: 190px;
+            border-width: 1px;
+            border-color: #e94560;
+            z-index: -1;
+            animation-delay: 0.6s;
+        }
+        
+        h1 {
+            color: #f8bbd0;
+            font-size: 24px;
+            margin: 20px 0 10px;
+            text-shadow: 3px 3px 0 #533483;
+        }
+        
+        .title {
+            color: #82b1ff;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .bio {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #b3e5fc;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 18px;
+            color: #e94560;
+        }
+        
+        .stat-label {
+            font-size: 10px;
+            color: #b3e5fc;
+        }
+        
+        .pixel-corners {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #e94560;
+        }
+        
+        .top-left {
+            top: -2px;
+            left: -2px;
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+        }
+        
+        .top-right {
+            top: -2px;
+            right: -2px;
+            clip-path: polygon(100% 0, 0% 0%, 100% 100%);
+        }
+        
+        .bottom-left {
+            bottom: -2px;
+            left: -2px;
+            clip-path: polygon(0 100%, 0% 0%, 100% 100%);
+        }
+        
+        .bottom-right {
+            bottom: -2px;
+            right: -2px;
+            clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 0.2; }
+            100% { opacity: 0.7; }
+        }
+        
+        @keyframes pulse-frame {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+        
+        .glitch {
+            position: relative;
+        }
+        
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+        
+        .glitch::before {
+            color: #0ff;
+            z-index: -1;
+            animation: glitch-effect 3s infinite;
+        }
+        
+        .glitch::after {
+            color: #f0f;
+            z-index: -2;
+            animation: glitch-effect 2s infinite reverse;
+        }
+        
+        @keyframes glitch-effect {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            80% { transform: translate(3px, -3px); }
+            100% { transform: translate(0); }
+        }
+    </style>
+    <!-- HTM< -->
+</head>
+<body>
+    <div class="profile-container">
+        <div class="pixel-corners top-left"></div>
+        <div class="pixel-corners top-right"></div>
+        <div class="pixel-corners bottom-left"></div>
+        <div class="pixel-corners bottom-right"></div>
+        
+        <div class="profile-pic-container">
+            <!-- Animated retro frame piece -->
+            <div class="frame-piece frame-1"></div>
+            <div class="frame-piece frame-2"></div>
+            <div class="frame-piece frame-3"></div>
+            <div class="frame-piece frame-4"></div>
+            
+            <!-- Profile picture -->
+            <div class="profile-pic">
+                <!-- Replace with your image -->
+                <img src="https://raw.githubusercontent.com/letsfo/assets/refs/heads/main/IMG_3152.png" alt="Profile Picture">
+            </div>
+        </div>
+                                    <!-- CHANGE THIS TO YOUR NAME -->
+        <h1 class="glitch" data-text="LETSFO">LETSFO</h1>
+        <div class="title">8-BIT GAME DESIGNER</div>
+        
+        <div class="bio">
+            This is your bio you can change and customize it however you want!
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">90</div>
+                <div class="stat-label">REPOS MADE</div>
+            </div>
+        </div>
+    </div>
+     <h5>Template from <a href="https://github.com/customizableproflies/profiles/">Customizable Profiles</a> on github!</h5> <!-- Please do not delete this as this helps us! -->
+</body>
+</html>
