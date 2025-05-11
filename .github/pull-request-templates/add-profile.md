@@ -5,6 +5,7 @@ Make it SFW if its not SFW then you cannot upload your profile html.
 Make sure its a profile.
 Make sure its not copied from here.
 If it's copied make sure you have permission.
+Has to be fully open source and readable.
 
 # Requirements
 [] Is it your's?
