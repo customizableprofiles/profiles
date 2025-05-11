@@ -1,0 +1,151 @@
+<!-- Customizable Profiles Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David - Web Developer</title>
+    <style>
+        /* CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap'); /* Fonts */
+        
+        body {
+            background-color: #1e1e1e; /* VS Code dark theme background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #d4d4d4; /* VS Code default text color */
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .profile-card {
+            background-color: #252526; /* VS Code sidebar background */
+            border-radius: 8px;
+            padding: 2rem;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #0e639c; /* VS Code active tab border blue */
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border-left-color: #4ec9b0; /* VS Code teal accent on hover */
+        }
+        
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #2d2d2d; /* Dark gray for empty avatar */
+            margin: 0 auto 1rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 0 4px #1e1e1e, /* Inner shadow */
+                        0 0 0 6px #4ec9b0; /* VS Code teal border */
+        }
+        
+        .profile-pic::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: inset 0 0 10px rgba(78, 201, 176, 0.4); /* Inner glow */
+        }
+        
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+            color: #4ec9b0; /* VS Code teal */
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .title {
+            font-size: 1rem;
+            color: #9cdcfe; /* VS Code light blue */
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .title:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: #4ec9b0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-card:hover .title:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        .username {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            color: #ce9178; /* VS Code light orange */
+        }
+        
+        .username:before {
+            content: '@';
+            margin-right: 5px;
+            color: #4ec9b0;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .tag {
+            background-color: rgba(78, 201, 176, 0.1);
+            color: #4ec9b0;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-family: 'Space Mono', monospace;
+            border: 1px solid rgba(78, 201, 176, 0.3);
+        }
+        
+        .tag:hover {
+            background-color: rgba(78, 201, 176, 0.2);
+        }
+        
+        .tag.code:before {
+            content: '</>';
+            margin-right: 5px;
+            color: #569cd6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Profile -->
+    <div class="profile-card">
+        <div class="profile-pic" style="background-image: url('https://raw.githubusercontent.com/mrdavidss-vgg/assets/refs/heads/main/IMG_3089.jpeg'); background-size: cover;"></div>        <h1 class="name">David</h1>
+        <p class="title">// Web Dev / Kitty luva //</p>
+        <div class="username">mrdavidss</div>
+        <div class="tags">
+            <div class="tag code">Front End Developer</div>
+            <div class="tag">Kitty luva</div>
+        </div>
+    </div>
+  <h5>Template from <a href="https://github.com/customizableproflies/profiles/">Customizable Profiles</a> on github!</h5> <!-- Please do not delete this as this helps us! -->
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!-- Customizable Profiles Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>david the sigma</title> <!-- Replace with something -->
+    <style>
+        /*sum css*/
+        :root {
+            --primary: #00ff9d;
+            --secondary: #0095ff;
+            --bg-dark: #0a0a0a;
+            --bg-light: #111111;
+            --text: #e0e0e0;
+            --text-dim: #888888;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: 
+                url(''),
+                radial-gradient(circle at 25% 25%, rgba(0, 149, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0, 255, 157, 0.1) 0%, transparent 50%);
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .profile-card {
+            background-color: rgba(17, 17, 17, 0.85);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+        }
+        
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                transparent, transparent, transparent,
+                rgba(0, 255, 157, 0.1)
+            );
+            transform: rotate(30deg);
+            z-index: 0;
+        }
+        
+        .profile-header {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+            margin: 0 auto 20px;
+            display: block;
+            background-color: #222;
+            background-image: url('https://raw.githubusercontent.com/mrdavidss-vgg/assets/refs/heads/main/IMG_3089.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .username {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: lowercase;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tagline::before, .tagline::after {
+            content: '//';
+            color: var(--primary);
+            margin: 0 8px;
+            font-weight: bold;
+        }
+        
+        .handle {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        
+        .handle::before {
+            content: '@';
+            color: var(--secondary);
+            margin-right: 2px;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        .badges {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .badge.dev::before {
+            content: '</>';
+            color: var(--primary);
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        
+        .badge.cat::before {
+            content: '🐱';
+            margin-right: 5px;
+        }
+        
+        .corner-decoration {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--primary);
+            opacity: 0.5;
+        }
+        
+        .top-left {
+            top: 10px;
+            left: 10px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .top-right {
+            top: 10px;
+            right: 10px;
+            border-left: none;
+            border-bottom: none;
+        }
+        
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+            border-right: none;
+            border-top: none;
+        }
+        
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+            border-left: none;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- profile card -->
+    <div class="profile-card">
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+        <!-- Main Proflie  -->
+        <div class="profile-header">
+            <div class="profile-pic"></div>
+            <h1 class="username">David</h1>
+            <p class="tagline">Web Dev / Kitty luva</p>
+            <div class="handle">mrdavidss</div>
+            <div class="uid">1</div>
+        </div>
+        <!-- Badges -->
+        <div class="badges">
+            <div class="badge dev">Developer</div>
+            <div class="badge cat">Cat Lover</div>
+        </div>
+    </div>
+    <h5>Template from <a href="https://github.com/customizableproflies/profiles/">Customizable Profiles</a> on github!</h5> <!-- Please do not delete this as this helps us! -->
+</body>
+</html>
