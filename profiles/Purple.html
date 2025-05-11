@@ -1,0 +1,160 @@
+<!-- Customizable Profiles Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title name - your name</title>
+    <style>
+        :root {
+            --purple-dark: #1a001a;
+            --purple-mid: #4a148c;
+            --purple-light: #c77dff;
+            --purple-glow: rgba(199, 125, 255, 0.3);
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--purple-dark);
+            color: #e6d5ff;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .banner {
+            background: linear-gradient(45deg, var(--purple-mid), #3c096c);
+            height: 150px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--purple-light);
+        }
+        .banner::before {
+            content: "{} [] <> //";
+            position: absolute;
+            color: rgba(255, 255, 255, 0.05);
+            font-size: 120px;
+            transform: rotate(-10deg);
+            top: -30px;
+            left: -50px;
+            user-select: none;
+        }
+        .profile {
+            text-align: center;
+            margin-top: -70px;
+            z-index: 2;
+            position: relative;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--purple-light);
+            background-color: #3c096c;
+            object-fit: cover;
+            box-shadow: 0 0 20px var(--purple-glow);
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--purple-light);
+            text-shadow: 0 0 10px var(--purple-glow);
+        }
+        .skill-bar {
+            background-color: #2d004d;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .skill-level {
+            background: linear-gradient(90deg, var(--purple-mid), var(--purple-light));
+            height: 20px;
+            border-radius: 10px;
+            text-align: right;
+            padding-right: 10px;
+            font-size: 12px;
+            line-height: 20px;
+            color: white;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(123, 44, 191, 0.3);
+            padding: 3px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.8em;
+            border: 1px dashed var(--purple-light);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid var(--purple-light);
+            padding: 10px;
+            font-family: monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        a {
+            color: #d8b4fe;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        a:hover {
+            color: var(--purple-light);
+            text-shadow: 0 0 8px var(--purple-glow);
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner with coding symbols -->
+    <div class="banner"></div>
+
+    <!-- Profile Section -->
+    <div class="profile">
+        <img src="https://raw.githubusercontent.com/letsfo/assets/refs/heads/main/IMG_3164.jpeg" alt="Profile" class="profile-pic"> <!-- Replace with your Profile Picture -->
+        <h1>[Your Name]</h1> <!-- Put your name here! -->
+        <p><em>Bio! Replace with your bio.</em></p>
+    </div>
+
+    <div class="container">
+        <!-- About -->
+        <h2>📜 About</h2>
+        <div class="code-block">
+            <span style="color: #569CD6">const</span> me = {<br>
+            &nbsp;&nbsp;mind: <span style="color: #CE9178">"Curious"</span>,<br>
+            &nbsp;&nbsp;code: [<span style="color: #CE9178">"HTML"</span>, <span style="color: #CE9178">"CSS"</span>, <span style="color: #CE9178">"JS"</span>],<br>
+            &nbsp;&nbsp;vibe: <span style="color: #CE9178">"Purple"</span><br>
+            };
+        </div>
+
+        <!-- Skills -->
+        <h2>🛠️ Skills</h2>
+        <p>HTML/CSS</p>
+        <div class="skill-bar">
+            <div class="skill-level" style="width: 90%">90%</div>
+        </div>
+        <p>JavaScript</p>
+        <div class="skill-bar">
+            <div class="skill-level" style="width: 75%">75%</div>
+        </div>
+
+        <!-- Interests -->
+        <h2>💻 Current Interests</h2>
+        <div>
+            <span class="tag">WebGL</span>
+            <span class="tag">Neon Aesthetics</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Three.js</span>
+            <span class="tag">UI Experiments</span>
+        </div>
+
+        <!-- Links -->
+        <h2>🌐 Connect</h2>
+        <p>
+            <a href="https://github.com/">GitHub</a> | 
+            <a href="https://codepen.io/">CodePen</a> | 
+            <a href="https://x.com">Twitter/X</a>
+        </p>
+    </div>
+    <h5>Template from <a href="https://github.com/customizableproflies/profiles/">Customizable Profiles</a> on github!</h5> <!-- Please do not delete this as this helps us! -->>
+</body>
+</html>
