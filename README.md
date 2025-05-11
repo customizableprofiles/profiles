@@ -24,7 +24,8 @@ AYoP is add your own profile. How do I Add my own html profile? Read the insruct
 4. Profit! 
 
 ## Discord
-Soon!
+Join the discord if you need more info.
+<a href="https://discord.gg/H5u2n8fXAU"><img alt="Discord Server" src="https://invidget.switchblade.xyz/H5u2n8fXAU"></a>
 
 # Credits
 Founder: mrdavidss-vgg
